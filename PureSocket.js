@@ -18,6 +18,7 @@ class PureSocket {
 
 	listen(signal, callback){
 		PS_Socket.onmessage = function(data){
+      // run callBack function
 			callback(data);
 		}
 	}
