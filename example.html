@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PureSocket Class Example</title>
+	<script src="PureSocket.js"></script>
+</head>
+<body>
+	Welcome to pure JavaScript Web Socket Class called PureSocket.js sample code page.
+	<div id="output"></div>
+
+	<script>
+		let type   = ["depth", "bookTicker"];
+		let symbol = "btcusdt"
+		let socket_address = `wss://stream.binance.com:9443/ws/${symbol}@${type[1]}`;
+
+		var mySocket = new PureSocket();
+				mySocket.connect(socket_address);
+				mySocket.listen("signal", function(data){
+					// console.log(data)
+				});
+	</script>
+
+</body>
+</html>
